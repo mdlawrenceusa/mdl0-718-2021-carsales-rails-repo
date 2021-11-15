@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Carmodel</th>
+      <th>Imageurl</th>
+      <th>Carmake</th>
+      <th>Videourl</th>
+      <th>Milage</th>
+      <th>Price</th>
+      <th>Exteriorcolor</th>
+      <th>Interiorcolor</th>
+      <th>Mpg</th>
+      <th>Fueltype</th>
+      <th>Transmission</th>
+      <th>Engine</th>
+      <th>Vin</th>
+      <th>Stocknumber</th>
+      <th>Vehiclhistory</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.carmodel %></td>
+        <td><%= car.imageurl %></td>
+        <td><%= car.carmake %></td>
+        <td><%= car.videourl %></td>
+        <td><%= car.milage %></td>
+        <td><%= car.price %></td>
+        <td><%= car.exteriorcolor %></td>
+        <td><%= car.interiorcolor %></td>
+        <td><%= car.mpg %></td>
+        <td><%= car.fueltype %></td>
+        <td><%= car.transmission %></td>
+        <td><%= car.engine %></td>
+        <td><%= car.vin %></td>
+        <td><%= car.stocknumber %></td>
+        <td><%= car.vehiclhistory %></td>
+        <td><%= link_to 'Show', car %></td>
+        <td><%= link_to 'Edit', edit_car_path(car) %></td>
+        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Car', new_car_path %>

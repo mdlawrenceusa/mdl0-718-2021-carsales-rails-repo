@@ -1,0 +1,92 @@
+<%= form_for(car) do |f| %>
+  <% if car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+      <% car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :carmodel %>
+    <%= f.text_field :carmodel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :imageurl %>
+    <%= f.text_field :imageurl %>
+  </div>
+
+  <div class="field">
+    <%= f.label :carmake %>
+    <%= f.text_field :carmake %>
+  </div>
+
+  <div class="field">
+    <%= f.label :videourl %>
+    <%= f.text_field :videourl %>
+  </div>
+
+  <div class="field">
+    <%= f.label :milage %>
+    <%= f.text_field :milage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :exteriorcolor %>
+    <%= f.text_field :exteriorcolor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :interiorcolor %>
+    <%= f.text_field :interiorcolor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mpg %>
+    <%= f.text_field :mpg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fueltype %>
+    <%= f.text_field :fueltype %>
+  </div>
+
+  <div class="field">
+    <%= f.label :transmission %>
+    <%= f.text_field :transmission %>
+  </div>
+
+  <div class="field">
+    <%= f.label :engine %>
+    <%= f.text_field :engine %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vin %>
+    <%= f.text_field :vin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stocknumber %>
+    <%= f.text_field :stocknumber %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vehiclhistory %>
+    <%= f.text_area :vehiclhistory %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

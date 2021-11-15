@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jobtitle: MyString
+  daterange: MyString
+  description: MyText
+  resume: one
+
+two:
+  jobtitle: MyString
+  daterange: MyString
+  description: MyText
+  resume: two
